@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/videoOverlay">
+
+    <RelativeLayout
+        android:id="@+id/videoPlayerWithAdPlayback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <com.lib.adloader.player.SampleVideoPlayer
+            android:id="@+id/sampleVideoPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <com.lib.adloader.playercontrolview.PlayerControlView
+            android:id="@+id/player_control_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:pcv_fast_forward_ms="1000"
+            app:pcv_fast_rewind_ms="500"
+            app:pcv_show_timeout_ms="5000"
+            />
+
+
+        <ImageButton
+        android:id="@+id/playButton"
+        android:contentDescription="Play Button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_action_play_over_video"
+        android:background="@null" />
+    </RelativeLayout>
+
+</LinearLayout>
